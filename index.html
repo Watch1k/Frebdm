@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="css/slick-theme.css">
 	<link rel="stylesheet" href="css/jquery.fancybox.css">
 	<link rel="stylesheet" href="css/jquery.fancybox-thumbs.css">
+	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/common.css">
 	<link rel="stylesheet" href="css/stylesheet.css">
 </head>
@@ -16,15 +17,15 @@
 	<!-- begin wrapper -->
 	<div id="main" class="wrapper">
 		<!-- begin header -->
-		<div class="header">
+		<div class="header wow fadeInDown">
 			<div class="container">
 				<div class="logo"><a href="index.html" title="Frebdm">Frebdm</a></div>
 				<ul class="nav-main">
-					<li class="is-active"><a href="#">Home</a></li>
-					<li><a href="#">Portfolios</a></li>
-					<li><a href="#">Blog</a></li>
-					<li><a href="#">Contact</a></li>
-					<li><a href="#">Shop</a></li>
+					<li class="is-active external"><a href="index.html">Home</a></li>
+					<li><a href="#portfolio" class="scrollTo">Portfolios</a></li>
+					<li><a href="#" class="external">Blog</a></li>
+					<li><a href="#" class="external">Contact</a></li>
+					<li><a href="#" class="external">Shop</a></li>
 				</ul>
 				<ul class="login">
 					<li><a href="#"><i class="icon-user2"></i></a></li>
@@ -52,7 +53,7 @@
 		<!-- end slider-main -->
 
 		<div class="main">
-			<div class="container">
+			<div class="container wow fadeInUp">
 				<h2>La Liberté guidant le peuple</h2>
 				<p>La Liberté guidant  le peuple est une huile sur toile d'Eugène Delacroix réalisée en 1830, inspirée de la révolution des Trois Glorieuses qui s'est passée en 1830. Présentée au public au Salon de Paris de 1831 sous le titre Scènes de barricades</p>
 			</div>
@@ -61,9 +62,9 @@
 		<!-- begin about -->
 		<div class="about">
 			<div class="container">
-				<h2>Postérité de l'œuvre</h2>
+				<h2 class="wow fadeInDown">Postérité de l'œuvre</h2>
 				<!-- begin about__list -->
-				<div class="about__list">
+				<div class="about__list wow fadeInUp">
 					<div class="about__item">
 						<div class="about__icon-wrap">
 							<div class="about__icon">
@@ -123,7 +124,7 @@
 				<h3>Notre Equipe</h3>
 				<!-- begin team__list -->
 				<div class="team__list">
-					<div class="team__item">
+					<div class="team__item wow bounceInLeft">
 						<div class="team__photo">
 							<figure>
 								<div class="team__img">
@@ -139,7 +140,7 @@
 						</ul>
 					</div>
 
-					<div class="team__item">
+					<div class="team__item wow bounceInUp">
 						<div class="team__photo">
 							<figure>
 								<div class="team__img">
@@ -155,7 +156,7 @@
 						</ul>
 					</div>
 
-					<div class="team__item">
+					<div class="team__item wow bounceInRight">
 						<div class="team__photo">
 							<figure>
 								<div class="team__img">
@@ -182,20 +183,20 @@
 				<h2>Our Features</h2>
 				<!-- begin features__list -->
 				<div class="features__list">
-					<div class="features__in">
+					<div class="features__in wow bounceInLeft">
 						<h3>Visual Composer</h3>
 						<h3>Page Builder</h3>
 						<p>We include Visual Composer plugin that allow user to create complex layout with visual page builder, you just need to drag and drop the elements or widgets to the page builder interface easily.</p>
 						<a href="#" class="more-btn">Lire plus</a>
 					</div>
-					<div class="features__in">
+					<div class="features__in wow bounceInRight">
 						<img src="img/features-1.png" alt="features">
 					</div>
 					
-					<div class="features__in">
+					<div class="features__in wow bounceInLeft">
 						<img src="img/features-2.png" alt="features">
 					</div>
-					<div class="features__in">
+					<div class="features__in wow bounceInRight">
 						<h3>Customize &amp;</h3>
 						<h3>Live Preview</h3>
 						<p>We include Visual Composer plugin that allow user to create complex layout with visual page builder, you just need to drag and drop the elements or widgets to the page builder interface easily.</p>
@@ -210,7 +211,7 @@
 		<!-- begin quotes  -->
 		<div class="quotes">
 			<div class="container">
-				<div class="slider-quotes">
+				<div class="slider-quotes wow fadeInUp">
 					<div>
 						<p class="quotes-title">What's the B<i class="icon-heart"></i>ZZ?</p>
 						<div class="quotes-img">
@@ -255,11 +256,11 @@
 		<!-- end quotes -->
 
 		<!-- begin portfolio  -->
-		<div class="portfolio">
+		<div id="portfolio" class="portfolio">
 			<div class="container">
-				<h2>Portfolio</h2>
+				<h2 class="wow fadeInUp">Portfolio</h2>
 				<!-- begin portfolio-filter -->
-				<ul class="portfolio-filter">
+				<ul class="portfolio-filter wow fadeInDown">
 					<li class="is-active">Show</li>
 					<li>All</li>
 					<li>Web</li>
@@ -271,13 +272,13 @@
 				<!-- begin pf-gal -->
 				<ul class="pf-gal">
 					<!-- begin pf-gal__item -->
-					<li class="pf-gal__item">
+					<li class="pf-gal__item wow fadeIn">
 						<img src="img/pf-1.jpg" data-category="web" alt="img">
 						<div class="pf-gal__mask">
-							<a href="img/pf-1.jpg" class="pf-fancybox pf-zoom">
+							<a href="img/pf-1.jpg" class="pf-fancybox pf-zoom" title="First image lorem with some random text">
 								<i class="icon-add"></i>
 							</a>
-							<a href="img/pf-1.jpg" class="pf-fancybox pf-all" data-fancybox-group="gallery_1">
+							<a href="img/pf-1.jpg" class="pf-fancybox pf-all" data-fancybox-group="gallery_1" title="First image lorem with some random text">
 								<i class="icon-eye-outline"></i>
 							</a>
 						</div>
@@ -285,7 +286,7 @@
 					<!-- end pf-gal__item -->
 
 					<!-- begin pf-gal__item -->
-					<li class="pf-gal__item">
+					<li class="pf-gal__item wow fadeIn">
 						<img src="img/pf-2.jpg" data-category="print" alt="img">
 						<div class="pf-gal__mask">
 							<a href="img/pf-2.jpg" class="pf-fancybox pf-zoom">
@@ -299,13 +300,13 @@
 					<!-- end pf-gal__item -->
 
 					<!-- begin pf-gal__item -->
-					<li class="pf-gal__item">
+					<li class="pf-gal__item wow fadeIn">
 						<img src="img/pf-3.jpg" data-category="print" alt="img">
 						<div class="pf-gal__mask">
-							<a href="img/pf-3.jpg" class="pf-fancybox pf-zoom">
+							<a href="img/pf-3.jpg" class="pf-fancybox pf-zoom" title="Image with random text">
 								<i class="icon-add"></i>
 							</a>
-							<a href="img/pf-3.jpg" class="pf-fancybox pf-all" data-fancybox-group="gallery_1">
+							<a href="img/pf-3.jpg" class="pf-fancybox pf-all" data-fancybox-group="gallery_1" title="Image with random text">
 								<i class="icon-eye-outline"></i>
 							</a>
 						</div>
@@ -313,13 +314,13 @@
 					<!-- end pf-gal__item -->
 
 					<!-- begin pf-gal__item -->
-					<li class="pf-gal__item">
+					<li class="pf-gal__item wow fadeIn">
 						<img src="img/pf-4.jpg" data-category="branding" alt="img">
 						<div class="pf-gal__mask">
-							<a href="img/pf-4.jpg" class="pf-fancybox pf-zoom">
+							<a href="img/pf-4.jpg" class="pf-fancybox pf-zoom" title="Image with random text">
 								<i class="icon-add"></i>
 							</a>
-							<a href="img/pf-4.jpg" class="pf-fancybox pf-all" data-fancybox-group="gallery_1">
+							<a href="img/pf-4.jpg" class="pf-fancybox pf-all" data-fancybox-group="gallery_1" title="Image with random text">
 								<i class="icon-eye-outline"></i>
 							</a>
 						</div>
@@ -327,13 +328,13 @@
 					<!-- end pf-gal__item -->
 
 					<!-- begin pf-gal__item -->
-					<li class="pf-gal__item">
+					<li class="pf-gal__item wow fadeIn">
 						<img src="img/pf-5.jpg" data-category="web" alt="img">
 						<div class="pf-gal__mask">
-							<a href="img/pf-5.jpg" class="pf-fancybox pf-zoom">
+							<a href="img/pf-5.jpg" class="pf-fancybox pf-zoom" title="Image with random text">
 								<i class="icon-add"></i>
 							</a>
-							<a href="img/pf-5.jpg" class="pf-fancybox pf-all" data-fancybox-group="gallery_1">
+							<a href="img/pf-5.jpg" class="pf-fancybox pf-all" data-fancybox-group="gallery_1" title="Image with random text">
 								<i class="icon-eye-outline"></i>
 							</a>
 						</div>
@@ -341,13 +342,13 @@
 					<!-- end pf-gal__item -->
 
 					<!-- begin pf-gal__item -->
-					<li class="pf-gal__item">
+					<li class="pf-gal__item wow fadeIn">
 						<img src="img/pf-6.jpg" data-category="branding" alt="img">
 						<div class="pf-gal__mask">
-							<a href="img/pf-6.jpg" class="pf-fancybox pf-zoom">
+							<a href="img/pf-6.jpg" class="pf-fancybox pf-zoom" title="Image with random text">
 								<i class="icon-add"></i>
 							</a>
-							<a href="img/pf-6.jpg" class="pf-fancybox pf-all" data-fancybox-group="gallery_1">
+							<a href="img/pf-6.jpg" class="pf-fancybox pf-all" data-fancybox-group="gallery_1" title="Image with random text">
 								<i class="icon-eye-outline"></i>
 							</a>
 						</div>
@@ -355,13 +356,13 @@
 					<!-- end pf-gal__item -->
 
 					<!-- begin pf-gal__item -->
-					<li class="pf-gal__item">
+					<li class="pf-gal__item wow fadeIn">
 						<img src="img/pf-7.jpg" data-category="web" alt="img">
 						<div class="pf-gal__mask">
-							<a href="img/pf-7.jpg" class="pf-fancybox pf-zoom">
+							<a href="img/pf-7.jpg" class="pf-fancybox pf-zoom" title="Image with random text">
 								<i class="icon-add"></i>
 							</a>
-							<a href="img/pf-7.jpg" class="pf-fancybox pf-all" data-fancybox-group="gallery_1">
+							<a href="img/pf-7.jpg" class="pf-fancybox pf-all" data-fancybox-group="gallery_1" title="Image with random text">
 								<i class="icon-eye-outline"></i>
 							</a>
 						</div>
@@ -369,7 +370,7 @@
 					<!-- end pf-gal__item -->
 
 					<!-- begin pf-gal__item -->
-					<li class="pf-gal__item">
+					<li class="pf-gal__item wow fadeIn">
 						<img src="img/pf-8.jpg" data-category="pring" alt="img">
 						<div class="pf-gal__mask">
 							<a href="img/pf-8.jpg" class="pf-fancybox pf-zoom">
@@ -383,7 +384,7 @@
 					<!-- end pf-gal__item -->
 
 					<!-- begin pf-gal__item -->
-					<li class="pf-gal__item">
+					<li class="pf-gal__item wow fadeIn">
 						<img src="img/pf-3.jpg" data-category="print" alt="img">
 						<div class="pf-gal__mask">
 							<a href="img/pf-3.jpg" class="pf-fancybox pf-zoom">
@@ -397,7 +398,7 @@
 					<!-- end pf-gal__item -->
 
 					<!-- begin pf-gal__item -->
-					<li class="pf-gal__item">
+					<li class="pf-gal__item wow fadeIn">
 						<img src="img/pf-4.jpg" data-category="branding" alt="img">
 						<div class="pf-gal__mask">
 							<a href="img/pf-4.jpg" class="pf-fancybox pf-zoom">
@@ -411,7 +412,7 @@
 					<!-- end pf-gal__item -->
 
 					<!-- begin pf-gal__item -->
-					<li class="pf-gal__item">
+					<li class="pf-gal__item wow fadeIn">
 						<img src="img/pf-5.jpg" data-category="web" alt="img">
 						<div class="pf-gal__mask">
 							<a href="img/pf-5.jpg" class="pf-fancybox pf-zoom">
@@ -425,7 +426,7 @@
 					<!-- end pf-gal__item -->
 
 					<!-- begin pf-gal__item -->
-					<li class="pf-gal__item">
+					<li class="pf-gal__item wow fadeIn">
 						<img src="img/pf-6.jpg" data-category="branding" alt="img">
 						<div class="pf-gal__mask">
 							<a href="img/pf-6.jpg" class="pf-fancybox pf-zoom">
@@ -447,7 +448,7 @@
 
 	<div class="footer">
 		<!-- begin footer-top  -->
-		<div class="footer-top">
+		<div class="footer-top wow fadeInUp">
 			<div class="container">
 				<div class="footer-col">
 					<h4>Snippet</h4>
@@ -457,12 +458,12 @@
 				<div class="footer-col">
 					<h4>Tags</h4>
 					<ul class="tags-list">
-						<li><a href="#" class="tags-btn">Responsive</a></li>
-						<li><a href="#" class="tags-btn">Flat</a></li>
-						<li><a href="#" class="tags-btn">Template</a></li>
-						<li><a href="#" class="tags-btn">Design</a></li>
-						<li><a href="#" class="tags-btn">Design</a></li>
-						<li><a href="#" class="tags-btn">Creative</a></li>
+						<li><a href="#" class="tags-btn"><span data-hover="Responsive">Responsive</span></a></li>
+						<li><a href="#" class="tags-btn"><span data-hover="Flat">Flat</span></a></li>
+						<li><a href="#" class="tags-btn"><span data-hover="Template">Template</span></a></li>
+						<li><a href="#" class="tags-btn"><span data-hover="Responsive">Design</span></a></li>
+						<li><a href="#" class="tags-btn"><span data-hover="Design">Design</span></a></li>
+						<li><a href="#" class="tags-btn"><span data-hover="Creative">Creative</span></a></li>
 					</ul>
 				</div>
 
@@ -471,15 +472,15 @@
 					<form id="form_contact">
 						<div class="field">
 							<label for="user_number">Nom:</label>
-							<input type="text" name="user_number">
+							<input type="text" name="user_number" id="user_number">
 						</div>
 						<div class="field">
 							<label for="user_email">Email:</label>
-							<input type="text" name="user_email">
+							<input type="text" name="user_email" id="user_email">
 						</div>
 						<div class="field">
 							<label for="user_message">Message:</label>
-							<textarea name="user_message"></textarea>
+							<textarea name="user_message" id="user_message"></textarea>
 						</div>
 					</form>
 				</div>
@@ -499,23 +500,35 @@
 				<span>Copyright &copy; All Rights Reserved. Bridgetech-ma.com.com</span>
 				<span><a href="mailto:Goh.h.com@gmail.com">Goh.h.com@gmail.com</a></span>
 				<ul class="nav-footer">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Portfolios</a></li>
-					<li><a href="#">Blog</a></li>
-					<li><a href="#">Contact</a></li>
-					<li><a href="#">Shop</a></li>
+					<li><a href="index.html" class="external">Home</a></li>
+					<li><a href="#portfolio" class="scrollTo">Portfolios</a></li>
+					<li><a href="#" class="external">Blog</a></li>
+					<li><a href="#" class="external">Contact</a></li>
+					<li><a href="#" class="external">Shop</a></li>
 				</ul>
 			</div>
 		</div>
 		<!-- end footer-bot -->
 	</div>
 
+	<div id="to_top" class="to_top">
+		<i class="icon-circle-up"></i>
+	</div>
+
+	<!-- begin loader-wrapper -->
+	<div id="loader-wrapper">
+		<div class="loader__in"></div>
+	</div>
+	<!-- end loader-wrapper -->
+
 	<script src="js/jquery.min.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/jquery.fancybox.js"></script>
 	<script src="js/jquery.fancybox-thumbs.js"></script>
 	<script src="js/isotope.pkgd.min.js"></script>
-	<script src=""></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/jquery.scrollTo.js"></script>
+	<script src="js/jquery.nav.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

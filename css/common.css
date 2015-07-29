@@ -41,7 +41,20 @@ a { color: inherit; }
 
 svg { display: block; width: 100%; height: 100%; }
 
+#loader-wrapper { position: fixed; top: 0; width: 100%; height: 100%; background: #775ba3; z-index: 1000; }
+
+.loader__in { position: relative; left: 50%; top: 50%; width: 150px; height: 150px; margin: -75px 0 0 -75px; border-radius: 50%; border: 3px solid transparent; border-top-color: #3498db; -webkit-animation: spin 2s linear infinite; animation: spin 2s linear infinite; }
+.loader__in:before { content: ""; position: absolute; top: 5px; left: 5px; right: 5px; bottom: 5px; border-radius: 50%; border: 3px solid transparent; border-top-color: #e74c3c; -webkit-animation: spin 3s linear infinite; animation: spin 3s linear infinite; }
+.loader__in:after { content: ""; position: absolute; top: 15px; left: 15px; right: 15px; bottom: 15px; border-radius: 50%; border: 3px solid transparent; border-top-color: #f9c922; -webkit-animation: spin 1.5s linear infinite; animation: spin 1.5s linear infinite; }
+@-webkit-keyframes spin { 0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+@keyframes spin { 0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
 body { min-width: 320px; font-family: "Istok Refular", Arial, sans-serif; font-size: 14px; line-height: 1.3; }
+
+.wrapper { overflow: hidden; min-height: 100%; padding-bottom: 371px; }
+
+.footer { margin-top: -371px; }
 
 .container { margin: 0 auto; max-width: 1170px; padding: 0 15px; }
 
@@ -50,19 +63,22 @@ body { min-width: 320px; font-family: "Istok Refular", Arial, sans-serif; font-s
 .header .container { padding: 0; }
 
 .logo { float: left; }
-.logo a { position: relative; display: block; font-size: 43px; color: #fff; line-height: 75px; text-decoration: none; }
+.logo a { position: relative; display: block; font-size: 43px; color: #fff; line-height: 75px; text-decoration: none; -webkit-transition: all 0.2s; transition: all 0.2s; }
 .logo a:before { content: ""; display: block; position: absolute; top: 1px; left: 50%; width: 30px; height: 25px; background: url("../img/logo.png") no-repeat 0 0; }
+.logo a:hover { color: #91c5a9; -webkit-transition: all 0.2s; transition: all 0.2s; }
 
 .nav-main { float: left; margin-left: 100px; }
-.nav-main li { float: left; border-bottom: 2px solid transparent; -webkit-transition: all 0.2s; transition: all 0.2s; }
-.nav-main li a { display: block; padding: 0 15px; font-family: "Istok Bold", Arial, sans-serif; color: #fff; text-shadow: 0.5px 0.9px 0 #876885; line-height: 73px; text-transform: uppercase; text-decoration: none; }
-.nav-main li.is-active, .nav-main li:hover { border-bottom: 2px solid #f8e1b4; -webkit-transition: all 0.2s; transition: all 0.2s; }
+.nav-main li { float: left; border-bottom: 3px solid transparent; -webkit-transition: all 0.2s; transition: all 0.2s; }
+.nav-main li a { display: block; padding: 0 15px; font-family: "Istok Bold", Arial, sans-serif; color: #fff; text-shadow: 0.5px 0.9px 0 #876885; line-height: 72px; text-transform: uppercase; text-decoration: none; }
+.nav-main li:hover { background-color: rgba(0, 0, 0, 0.1); }
+.nav-main li.is-active, .nav-main li:hover { border-bottom: 3px solid #f8e1b4; -webkit-transition: all 0.2s; transition: all 0.2s; }
 
 .login { float: right; }
 .login li { display: inline-block; }
 .login li + li { margin-left: 15px; }
 .login li a { display: block; text-decoration: none; }
-.login li a i { display: block; font-size: 24px; color: #fff; line-height: 75px; }
+.login li a i { display: block; font-size: 24px; color: #fff; line-height: 75px; -webkit-transition: all 0.2s; transition: all 0.2s; }
+.login li a:hover i { color: #91c5a9; -webkit-transition: all 0.2s; transition: all 0.2s; }
 
 .slider-main { position: relative; z-index: 5; top: -72px; }
 .slider-main.slick-slider { margin-bottom: 0; }
@@ -107,11 +123,16 @@ h2 { font-family: "Istok Bold", Arial, sans-serif; font-size: 40px; color: #775b
 .team__social li { float: left; width: 50%; height: 60px; }
 .team__social li a { text-decoration: none; }
 .team__social li a i { display: block; width: 100%; height: 100%; font-size: 30px; color: #fff; text-shadow: 1px 1.7px 2px rgba(0, 0, 0, 0.4); line-height: 60px; text-decoration: none; }
-.team__social li a i.icon-facebook { background-color: #3b5998; }
-.team__social li a i.icon-google-plus { background-color: #d14333; }
-.team__social li a i.icon-dribbble { background-color: #ea4c88; }
-.team__social li a i.icon-twitter { background-color: #00aced; }
-.team__social li a i.icon-youtube { background-color: #c70c0c; }
+.team__social li a i.icon-facebook { background-color: #3b5998; -webkit-transition: all 0.2s; transition: all 0.2s; }
+.team__social li a i.icon-google-plus { background-color: #d14333; -webkit-transition: all 0.2s; transition: all 0.2s; }
+.team__social li a i.icon-dribbble { background-color: #ea4c88; -webkit-transition: all 0.2s; transition: all 0.2s; }
+.team__social li a i.icon-twitter { background-color: #00aced; -webkit-transition: all 0.2s; transition: all 0.2s; }
+.team__social li a i.icon-youtube { background-color: #c70c0c; -webkit-transition: all 0.2s; transition: all 0.2s; }
+.team__social li a:hover i.icon-facebook { background-color: #1e2e4f; -webkit-transition: all 0.2s; transition: all 0.2s; }
+.team__social li a:hover i.icon-google-plus { background-color: #81271d; -webkit-transition: all 0.2s; transition: all 0.2s; }
+.team__social li a:hover i.icon-dribbble { background-color: #ba1654; -webkit-transition: all 0.2s; transition: all 0.2s; }
+.team__social li a:hover i.icon-twitter { background-color: #006287; -webkit-transition: all 0.2s; transition: all 0.2s; }
+.team__social li a:hover i.icon-youtube { background-color: #670606; -webkit-transition: all 0.2s; transition: all 0.2s; }
 
 .features { padding-top: 90px; padding-bottom: 90px; background-color: #775ba3; color: #fff; line-height: 21px; }
 .features h2 { color: #fff; text-transform: uppercase; }
@@ -121,7 +142,11 @@ h2 { font-family: "Istok Bold", Arial, sans-serif; font-size: 40px; color: #775b
 .features__in h3 { font-family: "Istok Bold", Arial, sans-serif; font-size: 35px; line-height: 47px; }
 .features__in h3 + p { margin-top: 20px; }
 .features__in img { width: 100%; height: 100%; }
-.features .more-btn { display: inline-block; margin-top: 30px; padding: 12px 50px; font-family: "Istok Bold", Arial, sans-serif; font-size: 18px; color: #fff; text-decoration: none; border: 4px solid #fff; }
+.features .more-btn { overflow: hidden; position: relative; z-index: 0; display: inline-block; margin-top: 30px; padding: 12px 50px; font-family: "Istok Bold", Arial, sans-serif; font-size: 18px; color: #fff; line-height: 1; text-decoration: none; border: 4px solid #fff; -webkit-transition: all 0.3s; transition: all 0.3s; }
+.features .more-btn:after { content: ""; position: absolute; z-index: -1; height: 0; width: 100%; top: 50%; left: 50%; background-color: #fff; opacity: 0; -webkit-transform: translateX(-50%) translateY(-50%); -ms-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%); -webkit-transition: all 0.3s; transition: all 0.3s; }
+.features .more-btn:hover { color: #775ba3; }
+.features .more-btn:hover:after { height: 75%; opacity: 1; }
+.features .more-btn:active:after { height: 130%; opacity: 1; }
 
 .quotes { padding-top: 90px; padding-bottom: 90px; color: #4b3f55; background-color: #fcfcfc; border-top: 1px solid #91c5a9; border-bottom: 1px solid #91c5a9; }
 .quotes-title { font-family: "Istok Bold", Arial, sans-serif; font-size: 40px; color: #775ba3; text-align: center; text-transform: uppercase; }
@@ -144,17 +169,22 @@ h2 { font-family: "Istok Bold", Arial, sans-serif; font-size: 40px; color: #775b
 
 .portfolio { padding-top: 70px; padding-bottom: 90px; color: #775ba3; }
 .portfolio-filter { margin-top: 15px; text-align: center; }
-.portfolio-filter li { display: inline-block; margin: 0 15px; padding: 5px 0; font-family: "Istok Bold", Arial, sans-serif; font-size: 16px; text-transform: uppercase; border-bottom: 2px solid transparent; cursor: pointer; }
-.portfolio-filter li.is-active { border-bottom: 2px solid #91c5a9; }
+.portfolio-filter li { position: relative; display: inline-block; margin: 0 15px; padding: 5px 0; font-family: "Istok Bold", Arial, sans-serif; font-size: 16px; text-transform: uppercase; border-bottom: 2px solid transparent; cursor: pointer; -webkit-transition: color 0.3s; transition: color 0.3s; }
+.portfolio-filter li:before { position: absolute; top: 70%; left: 50%; color: transparent; content: "•"; text-shadow: 0 0 transparent; font-size: 1.2em; -webkit-transition: text-shadow 0.3s, color 0.3s; transition: text-shadow 0.3s, color 0.3s; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); pointer-events: none; }
+.portfolio-filter li.is-active { border-bottom: 2px solid #91c5a9; -webkit-transition: border 1s; transition: border 1s; }
+.portfolio-filter li:hover { color: #e94709; border-bottom: 2px solid transparent; -webkit-transition: color 0.3s; transition: color 0.3s; }
+.portfolio-filter li:hover:before { color: #e94709; text-shadow: 10px 0 #e94709, -10px 0 #e94709; }
 
 .pf-gal { overflow: hidden; margin-top: 35px; -webkit-transition: height 1s; transition: height 1s; }
 .pf-gal__item { position: relative; overflow: hidden; float: left; width: 25%; height: 263px; cursor: pointer; }
 .pf-gal__item img { width: 100%; min-height: 100%; }
 .pf-gal__mask { position: absolute; top: 0; margin-top: 100%; left: 0; width: 100%; height: 100%; background-color: rgba(248, 225, 180, 0.74); text-align: center; -webkit-transition: all 0.3s; transition: all 0.3s; }
-.pf-gal__mask .pf-fancybox { position: relative; display: inline-block; top: 50%; margin-top: -28px; margin-left: 5px; margin-right: 5px; padding-top: 7px; width: 56px; height: 56px; font-size: 36px; color: #fff; text-decoration: none; background-color: #f98a5f; }
+.pf-gal__mask .pf-fancybox { position: relative; display: inline-block; top: 50%; margin-top: -28px; margin-left: 5px; margin-right: 5px; padding-top: 7px; width: 56px; height: 56px; font-size: 36px; color: #fff; text-decoration: none; background-color: #f98a5f; -webkit-transition: all 0.2s; transition: all 0.2s; }
+.pf-gal__mask .pf-fancybox:hover { background-color: #e94709; -webkit-transition: all 0.2s; transition: all 0.2s; }
 .pf-gal__item:hover .pf-gal__mask { margin-top: 0; -webkit-transition: all 0.3s; transition: all 0.3s; }
 
 .fancybox-wrap, .fancybox-wrap * { box-sizing: content-box; }
+.fancybox-wrap .fancybox-title, .fancybox-wrap * .fancybox-title { font-family: "Istok Refular", Arial, sans-serif; letter-spacing: 0.02em; background-color: rgba(0, 0, 0, 0.2); padding: 5px 10px; }
 
 .footer { font-family: "Istok Bold", Arial, sans-serif; color: #fff; }
 .footer-top { padding-top: 40px; padding-bottom: 30px; background-color: #91c5a9; }
@@ -165,7 +195,11 @@ h2 { font-family: "Istok Bold", Arial, sans-serif; font-size: 40px; color: #775b
 .footer-col .tags-list { *zoom: 1; margin-left: -17px; }
 .footer-col .tags-list:after { content: ""; display: table; clear: both; }
 .footer-col .tags-list li { float: left; margin-left: 17px; margin-bottom: 10px; }
-.footer-col .tags-list li .tags-btn { display: block; font-family: "Istok Refular", Arial, sans-serif; font-size: 12px; line-height: 32px; padding: 0 15px; background-color: #419568; text-decoration: none; }
+.footer-col .tags-list li .tags-btn { text-decoration: none; }
+.footer-col .tags-list li .tags-btn span { position: relative; z-index: 0; display: block; font-family: "Istok Refular", Arial, sans-serif; font-size: 12px; line-height: 32px; padding: 0 15px; background-color: #419568; -webkit-transition: -webkit-transform 0.3s; transition: transform 0.3s; -webkit-transform-origin: 50% 0; -ms-transform-origin: 50% 0; transform-origin: 50% 0; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; text-align: center; }
+.footer-col .tags-list li .tags-btn span:before { position: absolute; top: 100%; left: 0; width: 100%; height: 100%; background-color: #224e36; content: attr(data-hover); -webkit-transition: background 0.3s; transition: background 0.3s; -webkit-transform: rotateX(-90deg); transform: rotateX(-90deg); -webkit-transform-origin: 50% 0; -ms-transform-origin: 50% 0; transform-origin: 50% 0; }
+.footer-col .tags-list li .tags-btn:hover span { -webkit-transform: rotateX(90deg) translateY(-22px); transform: rotateX(90deg) translateY(-22px); }
+.footer-col .tags-list li .tags-btn:hover span:before { background-color: #419568; }
 .footer-col:last-child { text-align: center; }
 .footer-col:last-child a { text-decoration: none; }
 
@@ -173,6 +207,7 @@ h2 { font-family: "Istok Bold", Arial, sans-serif; font-size: 40px; color: #775b
 #form_contact .field:after { content: ""; display: table; clear: both; }
 #form_contact .field input { float: right; padding: 0 10px; width: 188px; height: 28px; font-family: "Istok Bold", Arial, sans-serif; color: #4b3f55; background-color: #fff; border: 1px solid #419568; }
 #form_contact .field textarea { float: right; padding: 5px; width: 188px; height: 96px; font-family: "Istok Bold", Arial, sans-serif; color: #4b3f55; background-color: #fff; border: 1px solid #419568; resize: none; }
+#form_contact .field input:focus, #form_contact .field textarea:focus { box-shadow: 0 0 2px rgba(0, 0, 0, 0.7); }
 
 .footer-bot { line-height: 75px; background-color: #54865d; box-shadow: inset 0.5px 0.9px 8px rgba(0, 0, 0, 0.3); }
 .footer-bot .container { padding: 0; *zoom: 1; }
@@ -182,4 +217,13 @@ h2 { font-family: "Istok Bold", Arial, sans-serif; font-size: 40px; color: #775b
 .footer-bot span + span a { text-decoration: none; }
 .footer-bot .nav-footer { float: right; }
 .footer-bot .nav-footer li { display: inline-block; margin-left: 20px; font-size: 12px; text-transform: uppercase; }
-.footer-bot .nav-footer li a { text-decoration: none; }
+.footer-bot .nav-footer li a { position: relative; display: inline-block; padding: 5px 0; text-decoration: none; line-height: 1.3; }
+.footer-bot .nav-footer li a:before, .footer-bot .nav-footer li a:after { position: absolute; left: 0; width: 100%; height: 2px; background: #fff; content: ""; opacity: 0; -webkit-transition: opacity 0.3s, -webkit-transform 0.3s; transition: opacity 0.3s, transform 0.3s; }
+.footer-bot .nav-footer li a:before { top: 0; -webkit-transform: translateY(-10px); -ms-transform: translateY(-10px); transform: translateY(-10px); }
+.footer-bot .nav-footer li a:after { bottom: 0; -webkit-transform: translateY(10px); -ms-transform: translateY(10px); transform: translateY(10px); }
+.footer-bot .nav-footer li a:hover:before, .footer-bot .nav-footer li a:hover:after { opacity: 1; -webkit-transform: translateY(0px); -ms-transform: translateY(0px); transform: translateY(0px); }
+
+.to_top { position: fixed; bottom: 15px; right: 15px; cursor: pointer; -webkit-transition: -webkit-transform 0.3s; transition: transform 0.3s; }
+.to_top i { font-size: 28px; color: #7f6a90; text-shadow: 0 0 1px white; -webkit-transition: all 0.3s; transition: all 0.3s; }
+.to_top:hover { -webkit-transform: scale(1.5); -ms-transform: scale(1.5); transform: scale(1.5); -webkit-transition: all 0.3s; transition: all 0.3s; }
+.to_top:hover i { color: #4b3f55; -webkit-transition: all 0.3s; transition: all 0.3s; }
