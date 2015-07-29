@@ -1,25 +1,16 @@
 $(document).ready(function(){
 
-// ScrollTo
-	$(function(){
-	    $('.nav-main').onePageNav({
-			filter: ':not(.external)',
-			scrollThreshold: 0.25,
-			scrollSpeed: 1200,
-			easing: 'swing',
-			scrollOffset: 38
-		});
-	});
-
-	$(function(){
-	    $('.nav-footer').onePageNav({
-			filter: ':not(.external)',
-			scrollThreshold: 0.25,
-			scrollSpeed: 1200,
-			easing: 'swing',
-			scrollOffset: 38
-		});
-	});
+// // ScrollTo
+// 	$(function(){
+// 	    $('.nav-main').onePageNav({
+// 	    	currentClass: 'is-active',
+// 			filter: ':not(.external)',
+// 			scrollThreshold: 0.25,
+// 			scrollSpeed: 1200,
+// 			easing: 'swing',
+// 			scrollOffset: 38
+// 		});
+// 	});
 
 // // js-inview
 // 	$('.js-inview').bind('inview', function(event, isInView, visiblePartX, visiblePartY) {
