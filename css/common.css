@@ -21,7 +21,117 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
 .disable-hover { pointer-events: none !important; }
 
+* { box-sizing: border-box; }
+
+a { color: inherit; }
+
 /*------ icons content-in ------ */
+@font-face { font-family: Istok Bold; src: url("fonts/IstokWeb-Bold.eot"); src: url("fonts/IstokWeb-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/IstokWeb-Bold.woff2") format("woff2"), url("fonts/IstokWeb-Bold.woff") format("woff"), url("fonts/IstokWeb-Bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: Istok Italic; src: url("fonts/IstokWeb-Italic.eot"); src: url("fonts/IstokWeb-Italic.eot?#iefix") format("embedded-opentype"), url("fonts/IstokWeb-Italic.woff2") format("woff2"), url("fonts/IstokWeb-Italic.woff") format("woff"), url("fonts/IstokWeb-Italic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: Istok Regular; src: url("fonts/IstokWeb-Regular.eot"); src: url("fonts/IstokWeb-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/IstokWeb-Regular.woff2") format("woff2"), url("fonts/IstokWeb-Regular.woff") format("woff"), url("fonts/IstokWeb-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: MinionPro Regular; src: url("fonts/MinionPro-Regular.eot"); src: url("fonts/MinionPro-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/MinionPro-Regular.woff2") format("woff2"), url("fonts/MinionPro-Regular.woff") format("woff"), url("fonts/MinionPro-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 /*------------------------------------------------------------------------- */
 /*----------------------------- MAIN STYLES ------------------------------- */
 /*------------------------------------------------------------------------- */
+svg { display: block; width: 100%; height: 100%; }
+
+body { min-width: 320px; font-family: "Istok Refular", Arial, sans-serif; font-size: 14px; line-height: 1.3; }
+
+.container { margin: 0 auto; max-width: 1170px; padding: 0 15px; }
+
+.header { background-color: rgba(119, 91, 163, 0.63); *zoom: 1; }
+.header:after { content: ""; display: table; clear: both; }
+.header .container { padding: 0; }
+
+.logo { float: left; }
+.logo a { position: relative; display: block; font-size: 43px; color: #fff; line-height: 75px; text-decoration: none; }
+.logo a:before { content: ""; display: block; position: absolute; top: 1px; left: 50%; width: 30px; height: 25px; background: url("../img/logo.png") no-repeat 0 0; }
+
+.nav-main { float: left; margin-left: 100px; }
+.nav-main li { float: left; border-bottom: 2px solid transparent; -webkit-transition: all 0.2s; transition: all 0.2s; }
+.nav-main li a { display: block; padding: 0 15px; font-family: "Istok Bold", Arial, sans-serif; color: #fff; text-shadow: 0.5px 0.9px 0 #876885; line-height: 73px; text-transform: uppercase; text-decoration: none; }
+.nav-main li.is-active, .nav-main li:hover { border-bottom: 2px solid #f8e1b4; -webkit-transition: all 0.2s; transition: all 0.2s; }
+
+.login { float: right; }
+.login li { display: inline-block; }
+.login li + li { margin-left: 15px; }
+.login li a { display: block; text-decoration: none; }
+.login li a i { display: block; font-size: 24px; color: #fff; line-height: 75px; }
+
+.main { padding-top: 90px; padding-bottom: 90px; }
+.main h2 + p { margin-top: 30px; font-family: "Istok Bold", Arial, sans-serif; font-size: 23px; color: #4b3f55; line-height: 36px; text-align: center; }
+
+h2 { font-family: "Istok Bold", Arial, sans-serif; font-size: 40px; color: #775ba3; text-align: center; }
+
+.about { padding-top: 90px; padding-bottom: 90px; background-color: rgba(249, 249, 249, 0.45); border-top: 1px solid #91c5a9; border-bottom: 1px solid #91c5a9; font-family: "Istok Bold", Arial, sans-serif; color: #4b3f55; line-height: 22px; text-align: center; }
+.about__list { margin-top: 50px; margin-left: -15px; *zoom: 1; }
+.about__list:after { content: ""; display: table; clear: both; }
+.about__item { float: left; padding-left: 15px; width: 33.333%; }
+.about__in { padding-top: 50px; }
+.about__icon-wrap { font-size: 56px; }
+.about__icon { position: relative; display: inline-block; padding: 15px; width: 90px; height: 90px; border-radius: 50%; border: 2px solid #4b3f55; box-shadow: 0 0 1px #4b3f55, inset 0 0 1px #4b3f55; }
+.about__icon i { display: block; }
+.about__icon .line-dash { position: absolute; left: 0; top: 50%; margin-left: -290px; width: 290px; height: 3px; }
+.about .about__item:nth-child(1) .about__icon i { margin-top: 2px; margin-left: 1px; }
+.about .about__item:nth-child(2) .about__icon i { margin-top: -3px; margin-left: 1px; }
+.about .about__item:nth-child(3) .about__icon i { margin-top: 1px; margin-left: 1px; }
+.about__count { font-size: 53px; color: #91c5a9; }
+.about__count + span { font-size: 13px; }
+
+.team { padding-top: 100px; padding-bottom: 100px; }
+.team h3 { font-family: "Istok Bold", Arial, sans-serif; font-size: 40px; color: #7e63a7; text-align: center; }
+.team__list { margin-top: 35px; margin-left: -15px; margin-right: -15px; *zoom: 1; }
+.team__list:after { content: ""; display: table; clear: both; }
+.team__item { float: left; padding: 0 15px; width: 33.333%; }
+.team__photo figcaption { padding-top: 10px; padding-bottom: 10px; font-family: "Istok Bold", Arial, sans-serif; font-size: 15px; color: #91c5a9; text-transform: uppercase; border-bottom: 4px solid #91c5a9; }
+.team__photo figcaption span { font-size: 12px; }
+.team__photo + p { margin-top: 10px; font-size: 13px; line-height: 18px; }
+.team__img { position: relative; overflow: hidden; height: 373px; }
+.team__img:after { position: absolute; content: ""; display: block; left: 0; bottom: 1px; width: 100%; height: 2px; background-color: #91c5a9; }
+.team__social { overflow: hidden; margin-top: 35px; text-align: center; }
+.team__social li { float: left; width: 50%; height: 60px; }
+.team__social li a { text-decoration: none; }
+.team__social li a i { display: block; width: 100%; height: 100%; font-size: 30px; color: #fff; text-shadow: 1px 1.7px 2px rgba(0, 0, 0, 0.4); line-height: 60px; text-decoration: none; }
+.team__social li a i.icon-facebook { background-color: #3b5998; }
+.team__social li a i.icon-google-plus { background-color: #d14333; }
+.team__social li a i.icon-dribbble { background-color: #ea4c88; }
+.team__social li a i.icon-twitter { background-color: #00aced; }
+.team__social li a i.icon-youtube { background-color: #c70c0c; }
+
+.features { padding-top: 90px; padding-bottom: 90px; background-color: #775ba3; color: #fff; line-height: 21px; }
+.features h2 { color: #fff; text-transform: uppercase; }
+.features__list { margin-left: -15px; margin-right: -15px; *zoom: 1; }
+.features__list:after { content: ""; display: table; clear: both; }
+.features__in { float: left; margin-top: 50px; padding: 0 15px; width: 50%; }
+.features__in h3 { font-family: "Istok Bold", Arial, sans-serif; font-size: 35px; line-height: 47px; }
+.features__in h3 + p { margin-top: 20px; }
+.features__in img { width: 100%; height: 100%; }
+.features .more-btn { display: inline-block; margin-top: 30px; padding: 12px 50px; font-family: "Istok Bold", Arial, sans-serif; font-size: 18px; color: #fff; text-decoration: none; border: 4px solid #fff; }
+
+.footer { font-family: "Istok Bold", Arial, sans-serif; color: #fff; }
+.footer-top { padding-top: 40px; padding-bottom: 30px; background-color: #91c5a9; }
+.footer-top .container { padding: 0; *zoom: 1; }
+.footer-top .container:after { content: ""; display: table; clear: both; }
+.footer-col { float: left; padding: 0 15px; width: 25%; }
+.footer-col h4 { margin-bottom: 15px; font-size: 23px; text-align: center; }
+.footer-col .tags-list { *zoom: 1; margin-left: -17px; }
+.footer-col .tags-list:after { content: ""; display: table; clear: both; }
+.footer-col .tags-list li { float: left; margin-left: 17px; margin-bottom: 10px; }
+.footer-col .tags-list li .tags-btn { display: block; font-family: "Istok Refular", Arial, sans-serif; font-size: 12px; line-height: 32px; padding: 0 15px; background-color: #419568; text-decoration: none; }
+.footer-col:last-child { text-align: center; }
+.footer-col:last-child a { text-decoration: none; }
+
+#form_contact .field { margin-bottom: 10px; *zoom: 1; }
+#form_contact .field:after { content: ""; display: table; clear: both; }
+#form_contact .field input { float: right; padding: 0 10px; width: 188px; height: 28px; font-family: "Istok Bold", Arial, sans-serif; color: #4b3f55; background-color: #fff; border: 1px solid #419568; }
+#form_contact .field textarea { float: right; padding: 5px; width: 188px; height: 96px; font-family: "Istok Bold", Arial, sans-serif; color: #4b3f55; background-color: #fff; border: 1px solid #419568; resize: none; }
+
+.footer-bot { line-height: 75px; background-color: #54865d; box-shadow: inset 0.5px 0.9px 8px rgba(0, 0, 0, 0.3); }
+.footer-bot .container { padding: 0; *zoom: 1; }
+.footer-bot .container:after { content: ""; display: table; clear: both; }
+.footer-bot span { float: left; }
+.footer-bot span + span { margin-left: 40px; }
+.footer-bot span + span a { text-decoration: none; }
+.footer-bot .nav-footer { float: right; }
+.footer-bot .nav-footer li { display: inline-block; margin-left: 20px; font-size: 12px; text-transform: uppercase; }
+.footer-bot .nav-footer li a { text-decoration: none; }
