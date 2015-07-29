@@ -5,6 +5,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Frebdm</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.css">
+	<link rel="stylesheet" href="css/jquery.fancybox-thumbs.css">
 	<link rel="stylesheet" href="css/common.css">
 	<link rel="stylesheet" href="css/stylesheet.css">
 </head>
@@ -32,7 +36,19 @@
 		<!-- end header -->
 		
 		<!-- begin slider-main -->
-		<div class="slider-main"></div>
+		<div class="slider-main">
+			<div>
+				<img src="img/slider-1.jpg" alt="slider">
+			</div>
+
+			<div>
+				<img src="img/slider-1.jpg" alt="slider">
+			</div>
+
+			<div>
+				<img src="img/slider-1.jpg" alt="slider">
+			</div>
+		</div>
 		<!-- end slider-main -->
 
 		<div class="main">
@@ -194,7 +210,46 @@
 		<!-- begin quotes  -->
 		<div class="quotes">
 			<div class="container">
-				
+				<div class="slider-quotes">
+					<div>
+						<p class="quotes-title">What's the B<i class="icon-heart"></i>ZZ?</p>
+						<div class="quotes-img">
+							<div class="quotes-img__in">
+								<img src="img/quote-1.jpg" alt="quote">
+							</div>
+						</div>
+						<div class="quotes-author">
+							<p>What’s our clients talking about our product or service. This is only an example to show you quote block effect here.</p>
+							<p>Georg Clooney</p>
+						</div>
+					</div>
+
+					<div>
+						<p class="quotes-title">What's the B<i class="icon-heart"></i>ZZ?</p>
+						<div class="quotes-img">
+							<div class="quotes-img__in">
+								<img src="img/quote-1.jpg" alt="quote">
+							</div>
+						</div>
+						<div class="quotes-author">
+							<p>What’s our clients talking about our product or service. This is only an example to show you quote block effect here.</p>
+							<p>Georg Clooney</p>
+						</div>
+					</div>
+
+					<div>
+						<p class="quotes-title">What's the B<i class="icon-heart"></i>ZZ?</p>
+						<div class="quotes-img">
+							<div class="quotes-img__in">
+								<img src="img/quote-1.jpg" alt="quote">
+							</div>
+						</div>
+						<div class="quotes-author">
+							<p>What’s our clients talking about our product or service. This is only an example to show you quote block effect here.</p>
+							<p>Georg Clooney</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<!-- end quotes -->
@@ -202,7 +257,188 @@
 		<!-- begin portfolio  -->
 		<div class="portfolio">
 			<div class="container">
-				
+				<h2>Portfolio</h2>
+				<!-- begin portfolio-filter -->
+				<ul class="portfolio-filter">
+					<li class="is-active">Show</li>
+					<li>All</li>
+					<li>Web</li>
+					<li>Print</li>
+					<li>Branding</li>
+				</ul>
+				<!-- end portfolio-filter -->
+
+				<!-- begin pf-gal -->
+				<ul class="pf-gal">
+					<!-- begin pf-gal__item -->
+					<li class="pf-gal__item">
+						<img src="img/pf-1.jpg" data-category="web" alt="img">
+						<div class="pf-gal__mask">
+							<a href="img/pf-1.jpg" class="pf-fancybox pf-zoom">
+								<i class="icon-add"></i>
+							</a>
+							<a href="img/pf-1.jpg" class="pf-fancybox pf-all" data-fancybox-group="gallery_1">
+								<i class="icon-eye-outline"></i>
+							</a>
+						</div>
+					</li>
+					<!-- end pf-gal__item -->
+
+					<!-- begin pf-gal__item -->
+					<li class="pf-gal__item">
+						<img src="img/pf-2.jpg" data-category="print" alt="img">
+						<div class="pf-gal__mask">
+							<a href="img/pf-2.jpg" class="pf-fancybox pf-zoom">
+								<i class="icon-add"></i>
+							</a>
+							<a href="img/pf-2.jpg" class="pf-fancybox pf-all" data-fancybox-group="gallery_1">
+								<i class="icon-eye-outline"></i>
+							</a>
+						</div>
+					</li>
+					<!-- end pf-gal__item -->
+
+					<!-- begin pf-gal__item -->
+					<li class="pf-gal__item">
+						<img src="img/pf-3.jpg" data-category="print" alt="img">
+						<div class="pf-gal__mask">
+							<a href="img/pf-3.jpg" class="pf-fancybox pf-zoom">
+								<i class="icon-add"></i>
+							</a>
+							<a href="img/pf-3.jpg" class="pf-fancybox pf-all" data-fancybox-group="gallery_1">
+								<i class="icon-eye-outline"></i>
+							</a>
+						</div>
+					</li>
+					<!-- end pf-gal__item -->
+
+					<!-- begin pf-gal__item -->
+					<li class="pf-gal__item">
+						<img src="img/pf-4.jpg" data-category="branding" alt="img">
+						<div class="pf-gal__mask">
+							<a href="img/pf-4.jpg" class="pf-fancybox pf-zoom">
+								<i class="icon-add"></i>
+							</a>
+							<a href="img/pf-4.jpg" class="pf-fancybox pf-all" data-fancybox-group="gallery_1">
+								<i class="icon-eye-outline"></i>
+							</a>
+						</div>
+					</li>
+					<!-- end pf-gal__item -->
+
+					<!-- begin pf-gal__item -->
+					<li class="pf-gal__item">
+						<img src="img/pf-5.jpg" data-category="web" alt="img">
+						<div class="pf-gal__mask">
+							<a href="img/pf-5.jpg" class="pf-fancybox pf-zoom">
+								<i class="icon-add"></i>
+							</a>
+							<a href="img/pf-5.jpg" class="pf-fancybox pf-all" data-fancybox-group="gallery_1">
+								<i class="icon-eye-outline"></i>
+							</a>
+						</div>
+					</li>
+					<!-- end pf-gal__item -->
+
+					<!-- begin pf-gal__item -->
+					<li class="pf-gal__item">
+						<img src="img/pf-6.jpg" data-category="branding" alt="img">
+						<div class="pf-gal__mask">
+							<a href="img/pf-6.jpg" class="pf-fancybox pf-zoom">
+								<i class="icon-add"></i>
+							</a>
+							<a href="img/pf-6.jpg" class="pf-fancybox pf-all" data-fancybox-group="gallery_1">
+								<i class="icon-eye-outline"></i>
+							</a>
+						</div>
+					</li>
+					<!-- end pf-gal__item -->
+
+					<!-- begin pf-gal__item -->
+					<li class="pf-gal__item">
+						<img src="img/pf-7.jpg" data-category="web" alt="img">
+						<div class="pf-gal__mask">
+							<a href="img/pf-7.jpg" class="pf-fancybox pf-zoom">
+								<i class="icon-add"></i>
+							</a>
+							<a href="img/pf-7.jpg" class="pf-fancybox pf-all" data-fancybox-group="gallery_1">
+								<i class="icon-eye-outline"></i>
+							</a>
+						</div>
+					</li>
+					<!-- end pf-gal__item -->
+
+					<!-- begin pf-gal__item -->
+					<li class="pf-gal__item">
+						<img src="img/pf-8.jpg" data-category="pring" alt="img">
+						<div class="pf-gal__mask">
+							<a href="img/pf-8.jpg" class="pf-fancybox pf-zoom">
+								<i class="icon-add"></i>
+							</a>
+							<a href="img/pf-8.jpg" class="pf-fancybox pf-all" data-fancybox-group="gallery_1">
+								<i class="icon-eye-outline"></i>
+							</a>
+						</div>
+					</li>
+					<!-- end pf-gal__item -->
+
+					<!-- begin pf-gal__item -->
+					<li class="pf-gal__item">
+						<img src="img/pf-3.jpg" data-category="print" alt="img">
+						<div class="pf-gal__mask">
+							<a href="img/pf-3.jpg" class="pf-fancybox pf-zoom">
+								<i class="icon-add"></i>
+							</a>
+							<a href="img/pf-3.jpg" class="pf-fancybox pf-all" data-fancybox-group="gallery_1">
+								<i class="icon-eye-outline"></i>
+							</a>
+						</div>
+					</li>
+					<!-- end pf-gal__item -->
+
+					<!-- begin pf-gal__item -->
+					<li class="pf-gal__item">
+						<img src="img/pf-4.jpg" data-category="branding" alt="img">
+						<div class="pf-gal__mask">
+							<a href="img/pf-4.jpg" class="pf-fancybox pf-zoom">
+								<i class="icon-add"></i>
+							</a>
+							<a href="img/pf-4.jpg" class="pf-fancybox pf-all" data-fancybox-group="gallery_1">
+								<i class="icon-eye-outline"></i>
+							</a>
+						</div>
+					</li>
+					<!-- end pf-gal__item -->
+
+					<!-- begin pf-gal__item -->
+					<li class="pf-gal__item">
+						<img src="img/pf-5.jpg" data-category="web" alt="img">
+						<div class="pf-gal__mask">
+							<a href="img/pf-5.jpg" class="pf-fancybox pf-zoom">
+								<i class="icon-add"></i>
+							</a>
+							<a href="img/pf-5.jpg" class="pf-fancybox pf-all" data-fancybox-group="gallery_1">
+								<i class="icon-eye-outline"></i>
+							</a>
+						</div>
+					</li>
+					<!-- end pf-gal__item -->
+
+					<!-- begin pf-gal__item -->
+					<li class="pf-gal__item">
+						<img src="img/pf-6.jpg" data-category="branding" alt="img">
+						<div class="pf-gal__mask">
+							<a href="img/pf-6.jpg" class="pf-fancybox pf-zoom">
+								<i class="icon-add"></i>
+							</a>
+							<a href="img/pf-6.jpg" class="pf-fancybox pf-all" data-fancybox-group="gallery_1">
+								<i class="icon-eye-outline"></i>
+							</a>
+						</div>
+					</li>
+					<!-- end pf-gal__item -->
+				</ul>
+				<!-- end pf-gal -->
 			</div>
 		</div>
 		<!-- end portfolio -->
@@ -275,6 +511,10 @@
 	</div>
 
 	<script src="js/jquery.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/jquery.fancybox.js"></script>
+	<script src="js/jquery.fancybox-thumbs.js"></script>
+	<script src="js/isotope.pkgd.min.js"></script>
 	<script src=""></script>
 	<script src="js/main.js"></script>
 </body>

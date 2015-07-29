@@ -1,15 +1,4 @@
-// $(document).ready(function(){
-
-// // Clear placeholder
-// 	(function() {
-// 		$('input,textarea').focus(function(){
-// 				$(this).data('placeholder',$(this).attr('placeholder'))
-// 				$(this).attr('placeholder','');
-// 		});
-// 		$('input,textarea').blur(function(){
-// 			$(this).attr('placeholder',$(this).data('placeholder'));
-// 		});
-// 	}());
+$(document).ready(function(){
 
 // // ScrollTo
 // 	$(function(){
@@ -40,20 +29,131 @@
 // // WOW animation
 // 	new WOW().init();
 
+// slider-main
+	$('.slider-main').slick({
+		dots: true,
+		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 7000
+	});
 
+// slider-main
+	$('.slider-quotes').slick({
+		dots: true,
+		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 7000
+	});
 
-// // 60fps scrolling
-// 	var body = document.body,
-// 	timer;
-// 	window.addEventListener('scroll', function() {
-// 		clearTimeout(timer);
-// 		if(!body.classList.contains('disable-hover')) {
-// 			body.classList.add('disable-hover')
-// 		}
-// 		timer = setTimeout(function(){
-// 			body.classList.remove('disable-hover')
-// 		}, 250);
-// 	}, false);
+//Gallery fancybox
+	$('.pf-fancybox').fancybox({
+		theme: 'light',
+		padding: 5,
+		openEffect	: 'elastic',
+		closeEffect	: 'drop',
+		prevEffect: 'none',
+		nextEffect: 'none',
+		caption : {
+			type : 'outside'
+		},
+		helpers: {
+			thumbs: true
+		},
+		locked: false,
+		locale: 'ru',
+		locales: {
+			'ru': {
+				CLOSE: 'закрыть',
+				NEXT: 'вперед',
+				PREV: 'назад',
+				EXPAND: 'показать в полном размере'
+			}
+		}
+	});
+
+// Isotope Filter (portfolio)
+	function hideItem() {
+		if ($('.pf-gal').length > 0) {
+			$('.pf-gal__item').each(function(){
+				if ($(this).index() > 7) {
+					console.log("fine");
+					$(this).hide();
+				}
+			});
+		};
+	};
+
+	if ($(".pf-gal").length > 0) {
+		var itemWidth = $('.pf-gal__item').width();
+		$('.pf-gal__item').css('height', itemWidth);
+		// Add filter classes
+		$(".pf-gal__item").each(function(){
+			var classFilter = $(this).find("img").attr('data-category').toString().toLowerCase();
+			$(this).addClass(classFilter);
+		});
+
+		$(window).load(function(){
+			$('.pf-gal').isotope({
+				itemSelector: '.pf-gal__item',
+				layoutMode: 'fitRows',
+				transitionDuration: '0.8s',
+				sortBy: 'random'
+			});
+			$('.pf-gal').css('height', 2 * itemWidth);
+		});
+	};
+
+	var $selectValueFilter;
+	if ($(".portfolio-filter").length > 0) {
+		$(".portfolio-filter li").on("click", function(){
+			var filterRandom = false;
+			var _this = $(this);
+			$('.portfolio-filter li').removeClass('is-active');
+			_this.addClass('is-active')
+			$selectValueFilter = _this.text().toString().toLowerCase();
+			$('.pf-gal .pf-gal__item img').each(function(){
+				if (($(this).attr('data-category') != $selectValueFilter) && ($selectValueFilter != "all") && (($selectValueFilter != "show"))) {
+					$(this).siblings('.pf-gal__mask').children('.pf-all').attr("data-fancybox-group", "");
+				} else {
+					$(this).siblings('.pf-gal__mask').children('.pf-all').attr("data-fancybox-group", "gallery_1");
+				};
+			});
+			$selectValueFilter = '.' + $selectValueFilter;
+			if ($selectValueFilter == '.show') {
+				filterRandom = true;
+			};
+			if ($selectValueFilter == '.all' || $selectValueFilter == '.show') {
+				$selectValueFilter = '.pf-gal__item';
+			};
+			$(".pf-gal").isotope({
+				filter: $selectValueFilter
+			});
+			if (filterRandom) {
+				$('.pf-gal').isotope({
+					sortBy: 'random'
+				});
+				$('.pf-gal').css('height', 2 * itemWidth);
+			} else{
+				$('.pf-gal').isotope({
+					sortBy: 'original-order'
+				});
+			};
+			filterRandom = false;
+		});
+	};
+
+// 60fps scrolling
+	var body = document.body,
+	timer;
+	window.addEventListener('scroll', function() {
+		clearTimeout(timer);
+		if(!body.classList.contains('disable-hover')) {
+			body.classList.add('disable-hover')
+		}
+		timer = setTimeout(function(){
+			body.classList.remove('disable-hover')
+		}, 250);
+	}, false);
 	
 	
-// });
+});

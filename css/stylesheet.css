@@ -59,3 +59,9 @@
 .icon-circle:before {
     content: "\e600";
 }
+.icon-heart:before {
+    content: "\e60b";
+}
+.icon-add:before {
+    content: "\e60c";
+}
