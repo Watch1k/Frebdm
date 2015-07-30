@@ -209,12 +209,10 @@ h2 { font-family: "Istok Bold", Arial, sans-serif; font-size: 40px; color: #775b
 @media only screen and (max-width: 700px) { .quotes { padding-top: 30px; padding-bottom: 50px; } }
 .quotes-title { font-family: "Istok Bold", Arial, sans-serif; font-size: 40px; color: #775ba3; text-align: center; text-transform: uppercase; }
 @media only screen and (max-width: 900px) { .quotes-title { font-size: 30px; } }
-@media only screen and (max-width: 900px) and (max-width: 520px) { .quotes-title { font-size: 22px; } }
-
+@media only screen and (max-width: 520px) { .quotes-title { font-size: 22px; } }
 .quotes-title .icon-heart { font-size: 33px; color: #ff1717; }
 @media only screen and (max-width: 900px) { .quotes-title .icon-heart { font-size: 24px; } }
-@media only screen and (max-width: 900px) and (max-width: 520px) { .quotes-title .icon-heart { font-size: 16px; } }
-
+@media only screen and (max-width: 520px) { .quotes-title .icon-heart { font-size: 16px; } }
 .quotes-img { position: relative; float: left; margin-top: 15px; margin-right: 15px; margin-left: 3px; padding: 6px; width: 186px; height: 186px; border-radius: 50%; border: 4px solid #91c5a9; box-shadow: 0 0 1px #91c5a9, inset 0 0 1px #91c5a9; }
 .quotes-img:after { content: ""; position: absolute; top: 20px; right: 0; width: 0px; height: 0px; border-style: solid; border-width: 0 13px 21px 0; border-color: transparent #91c5a9 transparent transparent; -webkit-transform: rotate(230deg); -ms-transform: rotate(230deg); transform: rotate(230deg); }
 .quotes-img__in { overflow: hidden; width: 100%; height: 100%; border-radius: 50%; }
@@ -226,8 +224,7 @@ h2 { font-family: "Istok Bold", Arial, sans-serif; font-size: 40px; color: #775b
 .quotes-author:after { content: "»"; display: block; font-family: "Lucida Handwriting Italic", Arial, sans-serif; font-size: 40px; color: #91c5a9; line-height: 40px; text-align: right; font-weight: bold; }
 .quotes-author p { font-size: 27px; line-height: 47px; }
 @media only screen and (max-width: 900px) { .quotes-author p { font-size: 18px; line-height: 30px; } }
-@media only screen and (max-width: 900px) and (max-width: 520px) { .quotes-author p { line-height: 24px; } }
-
+@media only screen and (max-width: 520px) { .quotes-author p { line-height: 24px; } }
 .quotes-author p + p { font-family: "Istok Italic", Arial, sans-serif; font-size: 16px; color: #775ba3; line-height: 24px; text-transform: uppercase; text-align: right; }
 
 .slider-quotes { *zoom: 1; }
@@ -242,8 +239,7 @@ h2 { font-family: "Istok Bold", Arial, sans-serif; font-size: 40px; color: #775b
 .portfolio-filter { margin-top: 15px; text-align: center; }
 .portfolio-filter li { position: relative; display: inline-block; margin: 0 15px; padding: 5px 0; font-family: "Istok Bold", Arial, sans-serif; font-size: 16px; text-transform: uppercase; border-bottom: 2px solid transparent; cursor: pointer; -webkit-transition: color 0.3s; transition: color 0.3s; }
 @media only screen and (max-width: 479px) { .portfolio-filter li { margin: 0 7px; font-size: 14px; } }
-@media only screen and (max-width: 479px) and (max-width: 359px) { .portfolio-filter li { font-size: 12px; } }
-
+@media only screen and (max-width: 359px) { .portfolio-filter li { font-size: 12px; } }
 .portfolio-filter li:before { position: absolute; top: 70%; left: 50%; color: transparent; content: "•"; text-shadow: 0 0 transparent; font-size: 1.2em; -webkit-transition: text-shadow 0.3s, color 0.3s; transition: text-shadow 0.3s, color 0.3s; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); pointer-events: none; }
 .portfolio-filter li.is-active { border-bottom: 2px solid #91c5a9; -webkit-transition: border 1s; transition: border 1s; }
 .portfolio-filter li:hover { color: #e94709; border-bottom: 2px solid transparent; -webkit-transition: color 0.3s; transition: color 0.3s; }
@@ -253,8 +249,7 @@ h2 { font-family: "Istok Bold", Arial, sans-serif; font-size: 40px; color: #775b
 .pf-gal__item { position: relative; overflow: hidden; float: left; width: 25%; height: 263px; cursor: pointer; }
 .pf-gal__item img { width: 100%; min-height: 100%; }
 @media only screen and (max-width: 700px) { .pf-gal__item { width: 33.333%; } }
-@media only screen and (max-width: 700px) and (max-width: 479px) { .pf-gal__item { width: 50%; } }
-
+@media only screen and (max-width: 479px) { .pf-gal__item { width: 50%; } }
 .pf-gal__mask { position: absolute; top: 0; margin-top: 100%; left: 0; width: 100%; height: 100%; background-color: rgba(248, 225, 180, 0.74); text-align: center; -webkit-transition: all 0.3s; transition: all 0.3s; }
 .pf-gal__mask .pf-fancybox { position: relative; display: inline-block; top: 50%; margin-top: -28px; margin-left: 5px; margin-right: 5px; padding-top: 7px; width: 56px; height: 56px; font-size: 36px; color: #fff; text-decoration: none; background-color: #f98a5f; -webkit-transition: all 0.2s; transition: all 0.2s; }
 .pf-gal__mask .pf-fancybox:hover { background-color: #e94709; -webkit-transition: all 0.2s; transition: all 0.2s; }
