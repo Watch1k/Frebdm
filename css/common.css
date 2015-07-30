@@ -26,7 +26,6 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
 a { color: inherit; }
 
-/*------ icons content-in ------ */
 @font-face { font-family: Istok Bold; src: url("fonts/IstokWeb-Bold.eot"); src: url("fonts/IstokWeb-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/IstokWeb-Bold.woff2") format("woff2"), url("fonts/IstokWeb-Bold.woff") format("woff"), url("fonts/IstokWeb-Bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: Istok Italic; src: url("fonts/IstokWeb-Italic.eot"); src: url("fonts/IstokWeb-Italic.eot?#iefix") format("embedded-opentype"), url("fonts/IstokWeb-Italic.woff2") format("woff2"), url("fonts/IstokWeb-Italic.woff") format("woff"), url("fonts/IstokWeb-Italic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: Istok Regular; src: url("fonts/IstokWeb-Regular.eot"); src: url("fonts/IstokWeb-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/IstokWeb-Regular.woff2") format("woff2"), url("fonts/IstokWeb-Regular.woff") format("woff"), url("fonts/IstokWeb-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
