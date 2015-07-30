@@ -17,7 +17,7 @@
 	<!-- begin wrapper -->
 	<div id="main" class="wrapper">
 		<!-- begin header -->
-		<div class="header wow fadeInDown">
+		<div class="header">
 			<div class="container">
 				<div class="logo"><a href="index.html" title="Frebdm">Frebdm</a></div>
 				<ul class="nav-main">
@@ -27,6 +27,9 @@
 					<li><a href="#">Contact</a></li>
 					<li><a href="#">Shop</a></li>
 				</ul>
+				<button id="menu_toggle">
+					<span>toggle menu</span>
+				</button>
 				<ul class="login">
 					<li><a href="#"><i class="icon-user2"></i></a></li>
 					<li><a href="#"><i class="icon-circle"></i></a></li>
@@ -183,24 +186,28 @@
 				<h2>Our Features</h2>
 				<!-- begin features__list -->
 				<div class="features__list">
-					<div class="features__in wow bounceInLeft">
-						<h3>Visual Composer</h3>
-						<h3>Page Builder</h3>
-						<p>We include Visual Composer plugin that allow user to create complex layout with visual page builder, you just need to drag and drop the elements or widgets to the page builder interface easily.</p>
-						<a href="#" class="more-btn">Lire plus</a>
-					</div>
-					<div class="features__in wow bounceInRight">
-						<img src="img/features-1.png" alt="features">
+					<div class="row">
+						<div class="features__in wow bounceInRight">
+							<img src="img/features-1.png" alt="features">
+						</div>
+						<div class="features__in wow bounceInLeft">
+							<h3>Visual Composer</h3>
+							<h3>Page Builder</h3>
+							<p>We include Visual Composer plugin that allow user to create complex layout with visual page builder, you just need to drag and drop the elements or widgets to the page builder interface easily.</p>
+							<a href="#" class="more-btn">Lire plus</a>
+						</div>
 					</div>
 					
-					<div class="features__in wow bounceInLeft">
-						<img src="img/features-2.png" alt="features">
-					</div>
-					<div class="features__in wow bounceInRight">
-						<h3>Customize &amp;</h3>
-						<h3>Live Preview</h3>
-						<p>We include Visual Composer plugin that allow user to create complex layout with visual page builder, you just need to drag and drop the elements or widgets to the page builder interface easily.</p>
-						<a href="#" class="more-btn">Lire plus</a>
+					<div class="row">
+						<div class="features__in wow bounceInLeft">
+							<img src="img/features-2.png" alt="features">
+						</div>
+						<div class="features__in wow bounceInRight">
+							<h3>Customize &amp;</h3>
+							<h3>Live Preview</h3>
+							<p>We include Visual Composer plugin that allow user to create complex layout with visual page builder, you just need to drag and drop the elements or widgets to the page builder interface easily.</p>
+							<a href="#" class="more-btn">Lire plus</a>
+						</div>
 					</div>
 				</div>
 				<!-- end features__list -->
@@ -270,9 +277,9 @@
 				<!-- end portfolio-filter -->
 
 				<!-- begin pf-gal -->
-				<ul class="pf-gal">
+				<ul class="pf-gal wow fadeInUp">
 					<!-- begin pf-gal__item -->
-					<li class="pf-gal__item wow fadeIn">
+					<li class="pf-gal__item">
 						<img src="img/pf-1.jpg" data-category="web" alt="img">
 						<div class="pf-gal__mask">
 							<a href="img/pf-1.jpg" class="pf-fancybox pf-zoom" title="First image lorem with some random text">
@@ -286,7 +293,7 @@
 					<!-- end pf-gal__item -->
 
 					<!-- begin pf-gal__item -->
-					<li class="pf-gal__item wow fadeIn">
+					<li class="pf-gal__item">
 						<img src="img/pf-2.jpg" data-category="print" alt="img">
 						<div class="pf-gal__mask">
 							<a href="img/pf-2.jpg" class="pf-fancybox pf-zoom">
@@ -300,7 +307,7 @@
 					<!-- end pf-gal__item -->
 
 					<!-- begin pf-gal__item -->
-					<li class="pf-gal__item wow fadeIn">
+					<li class="pf-gal__item">
 						<img src="img/pf-3.jpg" data-category="print" alt="img">
 						<div class="pf-gal__mask">
 							<a href="img/pf-3.jpg" class="pf-fancybox pf-zoom" title="Image with random text">
@@ -314,7 +321,7 @@
 					<!-- end pf-gal__item -->
 
 					<!-- begin pf-gal__item -->
-					<li class="pf-gal__item wow fadeIn">
+					<li class="pf-gal__item">
 						<img src="img/pf-4.jpg" data-category="branding" alt="img">
 						<div class="pf-gal__mask">
 							<a href="img/pf-4.jpg" class="pf-fancybox pf-zoom" title="Image with random text">
@@ -328,7 +335,7 @@
 					<!-- end pf-gal__item -->
 
 					<!-- begin pf-gal__item -->
-					<li class="pf-gal__item wow fadeIn">
+					<li class="pf-gal__item">
 						<img src="img/pf-5.jpg" data-category="web" alt="img">
 						<div class="pf-gal__mask">
 							<a href="img/pf-5.jpg" class="pf-fancybox pf-zoom" title="Image with random text">
@@ -342,7 +349,7 @@
 					<!-- end pf-gal__item -->
 
 					<!-- begin pf-gal__item -->
-					<li class="pf-gal__item wow fadeIn">
+					<li class="pf-gal__item">
 						<img src="img/pf-6.jpg" data-category="branding" alt="img">
 						<div class="pf-gal__mask">
 							<a href="img/pf-6.jpg" class="pf-fancybox pf-zoom" title="Image with random text">
@@ -356,7 +363,7 @@
 					<!-- end pf-gal__item -->
 
 					<!-- begin pf-gal__item -->
-					<li class="pf-gal__item wow fadeIn">
+					<li class="pf-gal__item">
 						<img src="img/pf-7.jpg" data-category="web" alt="img">
 						<div class="pf-gal__mask">
 							<a href="img/pf-7.jpg" class="pf-fancybox pf-zoom" title="Image with random text">
@@ -370,7 +377,7 @@
 					<!-- end pf-gal__item -->
 
 					<!-- begin pf-gal__item -->
-					<li class="pf-gal__item wow fadeIn">
+					<li class="pf-gal__item">
 						<img src="img/pf-8.jpg" data-category="pring" alt="img">
 						<div class="pf-gal__mask">
 							<a href="img/pf-8.jpg" class="pf-fancybox pf-zoom">
@@ -384,7 +391,7 @@
 					<!-- end pf-gal__item -->
 
 					<!-- begin pf-gal__item -->
-					<li class="pf-gal__item wow fadeIn">
+					<li class="pf-gal__item">
 						<img src="img/pf-3.jpg" data-category="print" alt="img">
 						<div class="pf-gal__mask">
 							<a href="img/pf-3.jpg" class="pf-fancybox pf-zoom">
@@ -398,7 +405,7 @@
 					<!-- end pf-gal__item -->
 
 					<!-- begin pf-gal__item -->
-					<li class="pf-gal__item wow fadeIn">
+					<li class="pf-gal__item">
 						<img src="img/pf-4.jpg" data-category="branding" alt="img">
 						<div class="pf-gal__mask">
 							<a href="img/pf-4.jpg" class="pf-fancybox pf-zoom">
@@ -412,7 +419,7 @@
 					<!-- end pf-gal__item -->
 
 					<!-- begin pf-gal__item -->
-					<li class="pf-gal__item wow fadeIn">
+					<li class="pf-gal__item">
 						<img src="img/pf-5.jpg" data-category="web" alt="img">
 						<div class="pf-gal__mask">
 							<a href="img/pf-5.jpg" class="pf-fancybox pf-zoom">
@@ -426,7 +433,7 @@
 					<!-- end pf-gal__item -->
 
 					<!-- begin pf-gal__item -->
-					<li class="pf-gal__item wow fadeIn">
+					<li class="pf-gal__item">
 						<img src="img/pf-6.jpg" data-category="branding" alt="img">
 						<div class="pf-gal__mask">
 							<a href="img/pf-6.jpg" class="pf-fancybox pf-zoom">
@@ -488,7 +495,7 @@
 
 				<div class="footer-col">
 					<h4>Tweeter</h4>
-					<p>Check out this great <a href="#">https://www.behance.net/Bridgetech</a> Freddom- Responsive Multi-Purpose March 06 2014</p>
+					<p>Check out this great <a href="#">behance.net/Bridgetech</a> Freddom- Responsive Multi-Purpose March 06 2014</p>
 				</div>
 			</div>
 		</div>

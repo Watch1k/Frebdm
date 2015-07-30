@@ -1,3 +1,9 @@
+// loader
+$(window).on('load', function () {
+    $('#loader-wrapper .loader__in').fadeOut();
+    $('#loader-wrapper').fadeOut('slow');
+});
+
 $(document).ready(function(){
 
 // // ScrollTo
@@ -27,8 +33,31 @@ $(document).ready(function(){
 // 		}
 // 	});
 
+// menu toggle
+	$('#menu_toggle').on('click', function(){
+		$(this).toggleClass('is-active');
+		$('.nav-main').slideToggle();
+	});
+
+//Equal heights of team
+	$(window).on('load',function(){
+		var item2Height = 0,
+			item2HeightMin = $('.team__item').eq(0).find('.team__img').height();
+		$('.team__img').each(function(){
+			item2Height = $(this).height();
+			if (item2Height < item2HeightMin) {
+				item2HeightMin = item2Height;
+			};
+		});
+		$('.team__img').css('height', item2HeightMin);
+	});
+
 // WOW animation
-	new WOW().init();
+	$(window).on('load', function(){
+		new WOW({
+			offset: 100
+		}).init();
+	});
 
 // slider-main
 	$('.slider-main').slick({
@@ -209,8 +238,15 @@ $(document).ready(function(){
 	
 });
 
-// loader
-$(window).on('load', function () {
-    $('#loader-wrapper .loader__in').fadeOut();
-    $('#loader-wrapper').fadeOut('slow');
+// Window Scroll
+jQuery(window).scroll(function () {
+
+    'use strict';
+
+    if (jQuery(document).scrollTop() >= 1) {
+        $('.header').addClass('fixed');
+    } else {
+        $('.header').removeClass('fixed');
+    }
+
 });

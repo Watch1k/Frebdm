@@ -31,6 +31,8 @@ $green-light: #91c5a9
 	+selection
 		color: #fff
 		background-color: $green-light
+.row
+	+pie-clearfix
 svg
 	display: block
 	width: 100%
@@ -89,17 +91,56 @@ body
 	overflow: hidden
 	min-height: 100%
 	padding-bottom: 371px
+	+r(1000)
+		padding-bottom: 0
 .footer
 	margin-top: -371px
+	+r(1000)
+		margin-top: 0
 .container
 	margin: 0 auto
 	max-width: 1170px
 	padding: 0 15px
 .header
-	position: relative
-	z-index: 6
+	position: fixed
+	z-index: 1000
+	left: 0
+	top: 0
+	right: 0
 	background-color: rgba(119, 91, 163, 0.63)
 	+pie-clearfix
+	+r(1169)
+		padding: 0 15px
+	&.fixed
+		background-color: rgba(119, 91, 163, 0.93)
+		box-shadow: 0 0 3px rgba(0,0,0,0.8)
+		.logo
+			a
+				padding-top: 20px
+				font-size: 30px
+				line-height: 30px
+				transition: all 0.4s
+		.nav-main
+			li
+				a
+					line-height: 47px
+					transition: all 0.4s
+		.login
+			li
+				a
+					i
+						line-height: 50px
+						transition: all 0.4s
+		#menu_toggle
+			margin-top: 13px
+			transition: all 0.4s
+		+r(850)
+			.nav-main
+				top: 50px
+				transition: top 0.4s
+				li
+					a
+						line-height: 40px
 	.container
 		padding: 0
 .logo
@@ -111,7 +152,7 @@ body
 		color: #fff
 		line-height: 75px
 		text-decoration: none
-		transition: all 0.2s
+		transition: all 0.4s
 		&:before
 			content: ''
 			display: block
@@ -123,8 +164,7 @@ body
 			background: url("../img/logo.png") no-repeat 0 0
 		&:hover
 			color: $green-light
-
-			transition: all 0.2s
+			transition: all 0.4s
 .nav-main
 	float: left
 	margin-left: 100px
@@ -141,17 +181,41 @@ body
 			line-height: 72px
 			text-transform: uppercase
 			text-decoration: none
+			transition: all 0.4s
 		&:hover
 			background-color: rgba(0,0,0,0.1)
 		&.is-active, &:hover
 			border-bottom: 3px solid #f8e1b4
 			transition: all 0.2s
+	+r(850)
+		display: none
+		position: absolute
+		float: none
+		margin-left: 0
+		left: 0
+		right: 0
+		top: 75px
+		background-color: rgba(119, 91, 163, 0.63)
+		border-bottom: 5px solid $pink
+		box-shadow: 0 0 3px rgba(0,0,0,0.8)
+		transition: top 0.4s
+		li
+			float: none
+			text-align: center
+			border-top: 3px solid transparent
+			a
+				line-height: 40px
+			&.is-active, &:hover
+				border-top: 3px solid #f8e1b4
+				background-color: rgba(0,0,0,0.3)
 .login
 	float: right
 	li
 		display: inline-block
 		+ li
 			margin-left: 15px
+			+r(370)
+				margin-left: 5px
 		a
 			display: block
 			text-decoration: none
@@ -165,10 +229,65 @@ body
 				i
 					color: $green-light
 					transition: all 0.2s
-.slider-main
+#menu_toggle
+	display: none
+	float: right
 	position: relative
-	z-index: 5
-	top: -72px
+	overflow: hidden
+	margin-top: 24px
+	margin-left: 25px
+	width: 24px
+	height: 24px
+	font-size: 0
+	text-indent: -9999px
+	appearance: none
+	background-color: transparent
+	cursor: pointer
+	transition: background 0.3s
+	transition: margin 0.2s
+	+r(850)
+		display: block
+	span
+		display: block
+		position: absolute
+		top: 50%
+		left: 0
+		right: 0
+		height: 2px
+		background: white
+		transition: background 0s 0.3s
+		&:before, &:after
+			position: absolute
+			display: block
+			left: 0
+			width: 100%
+			height: 2px
+			background-color: #fff
+			content: ""
+			transition-duration: 0.3s, 0.3s
+			transition-delay: 0.3s, 0s
+		&:before
+			top: -7px
+			transition-property: top, transform
+		&:after
+			bottom: -7px
+			transition-property: bottom, transform
+	&.is-active
+		background-color: transparent
+		span
+			background: none
+			&:before
+				top: 0
+				transform: rotate(45deg)
+			&:after
+				bottom: 0
+				transform: rotate(-45deg)
+			&:before, &:after
+				transition-delay: 0s, 0.3s
+.slider-main
+	margin-top: 3px
+	+r(1169)
+		margin-top: 75px
 	&.slick-slider
 		margin-bottom: 0
 	.slick-slide
@@ -194,9 +313,11 @@ body
 					&:before
 						background-color: #fff
 .main
-	margin-top: -72px
 	padding-top: 90px
 	padding-bottom: 90px
+	+r(700)
+		padding-top: 30px
+		padding-bottom: 30px
 	h2
 		+ p
 			margin-top: 30px
@@ -205,11 +326,16 @@ body
 			color: $pink-dark
 			line-height: 36px
 			text-align: center
+			+r(700)
+				font-size: 16px
+				line-height: 24px
 h2
 	font-family: $istok-b
 	font-size: 40px
 	color: $pink
 	text-align: center
+	+r(700)
+		font-size: 30px
 .about
 	padding-top: 90px
 	padding-bottom: 90px
@@ -220,6 +346,9 @@ h2
 	color: $pink-dark
 	line-height: 22px
 	text-align: center
+	+r(700)
+		padding-top: 30px
+		padding-bottom: 30px
 	&__list
 		margin-top: 50px
 		margin-left: -15px
@@ -228,8 +357,14 @@ h2
 		float: left
 		padding-left: 15px
 		width: 33.333%
+		+r(920)
+			width: 100%
+			+ .about__item
+				margin-top: 50px
 	&__in
 		padding-top: 50px
+		+r(920)
+			padding-top: 30px
 	&__icon-wrap
 		font-size: 56px
 	&__icon
@@ -248,6 +383,8 @@ h2
 			margin-left: -290px
 			width: 290px
 			height: 3px
+			+r(1169)
+				display: none
 	.about__item:nth-child(1)
 		.about__icon
 			i
@@ -272,6 +409,9 @@ h2
 	padding-top: 100px
 	padding-bottom: 100px
 	color: $pink-dark
+	+r(920)
+		padding-top: 30px
+		padding-bottom: 30px
 	h3
 		font-family: $istok-b
 		font-size: 40px
@@ -286,6 +426,12 @@ h2
 		float: left
 		padding: 0 15px
 		width: 33.333%
+		+r(700)
+			margin: 0 auto
+			float: none
+			width: 70%
+			+ .team__item
+				margin-top: 40px
 	&__photo
 		figcaption
 			padding-top: 10px
@@ -304,7 +450,6 @@ h2
 	&__img
 		position: relative
 		overflow: hidden
-		height: 373px
 		&:after
 			position: absolute
 			content: ''
@@ -314,6 +459,9 @@ h2
 			width: 100%
 			height: 2px
 			background-color: $green-light
+		img
+			width: 100%
+			height: auto
 	&__social
 		overflow: hidden
 		margin-top: 35px
@@ -322,6 +470,10 @@ h2
 			float: left
 			width: 50%
 			height: 60px
+			+r(1019)
+				height: 40px
+			+r(700)
+				height: 30px
 			a
 				text-decoration: none
 				i
@@ -333,6 +485,11 @@ h2
 					text-shadow: 1px 1.7px 2px rgba(0, 0, 0, 0.4)
 					line-height: 60px
 					text-decoration: none
+					+r(1019)
+						line-height: 40px
+					+r(700)
+						font-size: 20px
+						line-height: 30px
 					&.icon-facebook
 						background-color: #3b5998
 						transition: all 0.2s
@@ -377,15 +534,45 @@ h2
 		margin-left: -15px
 		margin-right: -15px
 		+pie-clearfix
+		.row:nth-child(2n)
+			.features__in
+				float: left
+				+ .features__in
+					float: right
+			+r(600)
+				.features__in
+					float: none
+					margin: 0 auto
+					+ .features__in
+						width: 100%
+		.row:nth-child(2n+1)
+			.features__in
+				float: right
+				+ .features__in
+					float: left
+			+r(600)
+				.features__in
+					float: none
+					margin: 0 auto
+					+ .features__in
+						width: 100%
+		.row
+			+r(600)
+				+ .row
+					margin-top: 70px
 	&__in
-		float: left
 		margin-top: 50px
 		padding: 0 15px
 		width: 50%
+		+r(600)
+			text-align: center
 		h3
 			font-family: $istok-b
 			font-size: 35px
 			line-height: 47px
+			+r(700)
+				font-size: 24px
+				line-height: 32px
 			+ p
 				margin-top: 20px
 		img
@@ -425,7 +612,7 @@ h2
 		&:active
 			&:after
 				height: 130%
-				opacity: 1		
+				opacity: 1
 .quotes
 	padding-top: 90px
 	padding-bottom: 90px
@@ -433,20 +620,32 @@ h2
 	background-color: #fcfcfc
 	border-top: 1px solid #91c5a9
 	border-bottom: 1px solid #91c5a9
+	+r(700)
+		padding-top: 30px
+		padding-bottom: 50px
 	&-title
 		font-family: $istok-b
 		font-size: 40px
 		color: $pink
 		text-align: center
 		text-transform: uppercase
+		+r(900)
+			font-size: 30px
+			+r(520)
+				font-size: 22px
 		.icon-heart
 			font-size: 33px
 			color: #ff1717
+			+r(900)
+				font-size: 24px
+				+r(520)
+					font-size: 16px
 	&-img
 		position: relative
 		float: left
 		margin-top: 15px
 		margin-right: 15px
+		margin-left: 3px
 		padding: 6px
 		width: 186px
 		height: 186px
@@ -465,6 +664,16 @@ h2
 			border-radius: 50%
 			img
 				margin-left: -80px
+		+r(800)
+			width: 120px
+			height: 120px
+			+circle-in-fix(2,$green-light)
+			&:after
+				top: 2px
+			&__in
+				img
+					margin-left: -40px
+					width: 150%
 	&-author
 		&:before
 			content: '\ab'
@@ -486,6 +695,11 @@ h2
 		p
 			font-size: 27px
 			line-height: 47px
+			+r(900)
+				font-size: 18px
+				line-height: 30px
+				+r(520)
+					line-height: 24px
 			+ p
 				font-family: $istok-i
 				font-size: 16px
@@ -514,6 +728,9 @@ h2
 	padding-top: 70px
 	padding-bottom: 90px
 	color: $pink
+	+r(700)
+		padding-top: 30px
+		padding-bottom: 50px
 	&-filter
 		margin-top: 15px
 		text-align: center
@@ -528,6 +745,11 @@ h2
 			border-bottom: 2px solid transparent
 			cursor: pointer
 			transition: color 0.3s
+			+r(479)
+				margin: 0 7px
+				font-size: 14px
+				+r(359)
+					font-size: 12px
 			&:before
 				position: absolute
 				top: 70%
@@ -563,6 +785,10 @@ h2
 		img
 			width: 100%
 			min-height: 100%
+		+r(700)
+			width: 33.333%
+			+r(479)
+				width: 50%
 	&__mask
 		position: absolute
 		top: 0
@@ -616,17 +842,37 @@ h2
 		float: left
 		padding: 0 15px
 		width: 25%
+		+pie-clearfix
 		h4
 			margin-bottom: 15px
 			font-size: 23px
 			text-align: center
+		+r(1079)
+			float: none
+			width: 100%
+			+ .footer-col
+				margin-top: 45px
+			&:nth-child(1)
+				text-align: center
+				padding: 0 50px
+			&:nth-child(3)
+				margin-left: auto
+				margin-right: auto
+				width: 70%
+				+r(479)
+					width: 100%
 		.tags-list
 			+pie-clearfix
 			margin-left: -17px
+			+r(1079)
+				text-align: center
 			li
 				float: left
 				margin-left: 17px
 				margin-bottom: 10px
+				+r(1079)
+					float: none
+					display: inline-block
 				.tags-btn
 					text-decoration: none
 					span
@@ -687,8 +933,15 @@ h2
 			resize: none
 		input:focus, textarea:focus
 			box-shadow: 0 0 2px rgba(0,0,0,0.7)
+		input, textarea
+			+r(1169)
+				width: 70%
 	.form-error
 		float: right
+		+r(1079)
+			float: none
+			display: block
+			margin-top: 10px
 	.submit-btn
 		overflow: hidden
 		position: relative
@@ -721,19 +974,31 @@ h2
 			font-size: 100%
 			color: #fff
 			transition: all 0.3s
+		+r(1169)
+			width: 70%
 .footer-bot
 	line-height: 75px
 	background-color: #54865d
 	box-shadow: inset 0.5px 0.9px 8px rgba(0, 0, 0, 0.3)
+	+r(1000)
+		padding-top: 10px
+		padding-bottom: 20px
+		text-align: center
+		line-height: 26px
 	.container
 		padding: 0
 		+pie-clearfix
+		+r(1169)
+			padding: 0 15px
 	span
 		float: left
 		+ span
 			margin-left: 40px
 			a
 				text-decoration: none
+		+r(1000)
+			float: none
+			display: block
 	.nav-footer
 		float: right
 		li
@@ -766,6 +1031,8 @@ h2
 					&:before, &:after
 						opacity: 1
 						transform: translateY(0px)
+		+r(1000)
+			float: none
 .to_top
 	position: fixed
 	bottom: 15px
