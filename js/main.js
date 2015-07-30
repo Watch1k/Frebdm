@@ -159,6 +159,10 @@ $(document).ready(function(){
 				$.post('send.php', post_data, function(response){  
 				    if (response.type == 'error'){ //load json data from server and output message     
 				        output = '<div class="error">'+response.text+'</div>';
+				        $('#form_contact .submit-btn').text('Error');
+				        setTimeout(function(){
+				        	$('#form_contact .submit-btn').text('Send');
+				        }, 3000);
 				    }
 				    else {
 				        output = '<div class="success">'+response.text+'</div>';
