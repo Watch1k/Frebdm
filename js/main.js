@@ -142,6 +142,39 @@ $(document).ready(function(){
 			filterRandom = false;
 		});
 	};
+
+// form
+	$.validate({
+		validateOnBlur: true
+	});
+	$('input[name="user_number"]').mask("(999) 999-99-99");
+
+// Ajax Form
+	(function () {
+		$.validate({
+			onSuccess : function() {
+				post_data = $('#form_contact').serialize();
+				
+				//Ajax post data to server
+				$.post('send.php', post_data, function(response){  
+				    if (response.type == 'error'){ //load json data from server and output message     
+				        output = '<div class="error">'+response.text+'</div>';
+				    }
+				    else {
+				        output = '<div class="success">'+response.text+'</div>';
+				        //reset values in all input fields
+				        $('#form_contact').find('input[type=text], textarea').val("");
+				        $('#form_contact .submit-btn').text('Done');
+				        setTimeout(function(){
+				        	$('#form_contact .submit-btn').text('Send');
+				        }, 3000);
+				    }
+				}, 'json');
+				return false;
+			}
+		});
+	}());
+
 // to top
 	(function() {
 		$(window).scroll(function() {

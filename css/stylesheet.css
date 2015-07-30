@@ -68,3 +68,6 @@
 .icon-circle-up:before {
     content: "\e60d";
 }
+.icon-done:before {
+    content: "\e60e";
+}

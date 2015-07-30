@@ -208,6 +208,13 @@ h2 { font-family: "Istok Bold", Arial, sans-serif; font-size: 40px; color: #775b
 #form_contact .field input { float: right; padding: 0 10px; width: 188px; height: 28px; font-family: "Istok Bold", Arial, sans-serif; color: #4b3f55; background-color: #fff; border: 1px solid #419568; }
 #form_contact .field textarea { float: right; padding: 5px; width: 188px; height: 96px; font-family: "Istok Bold", Arial, sans-serif; color: #4b3f55; background-color: #fff; border: 1px solid #419568; resize: none; }
 #form_contact .field input:focus, #form_contact .field textarea:focus { box-shadow: 0 0 2px rgba(0, 0, 0, 0.7); }
+#form_contact .form-error { float: right; }
+#form_contact .submit-btn { overflow: hidden; position: relative; float: right; width: 188px; font-family: "Istok Refular", Arial, sans-serif; font-size: 16px; color: #fff; line-height: 24px; text-align: center; background-color: transparent; border: 2px solid #fff; -webkit-transition: all 0.3s; transition: all 0.3s; }
+#form_contact .submit-btn:active { color: #224e36; border-color: #224e36; }
+#form_contact .submit-btn:active:before { color: #224e36; }
+#form_contact .submit-btn:hover { background-color: #419568; -webkit-transition: all 0.3s; transition: all 0.3s; }
+#form_contact .submit-btn:hover:before { left: 85%; }
+#form_contact .submit-btn:before { position: absolute; left: 130%; top: 0; height: 100%; font-family: "icomoon"; font-size: 100%; color: #fff; -webkit-transition: all 0.3s; transition: all 0.3s; }
 
 .footer-bot { line-height: 75px; background-color: #54865d; box-shadow: inset 0.5px 0.9px 8px rgba(0, 0, 0, 0.3); }
 .footer-bot .container { padding: 0; *zoom: 1; }

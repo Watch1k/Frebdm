@@ -687,6 +687,40 @@ h2
 			resize: none
 		input:focus, textarea:focus
 			box-shadow: 0 0 2px rgba(0,0,0,0.7)
+	.form-error
+		float: right
+	.submit-btn
+		overflow: hidden
+		position: relative
+		float: right
+		width: 188px
+		font-family: $istok
+		font-size: 16px
+		color: #fff
+		line-height: 24px
+		text-align: center
+		background-color: transparent
+		border: 2px solid #fff
+		transition: all 0.3s
+		&:active
+			color: darken(#419568,20)
+			border-color: darken(#419568,20)
+			&:before
+				color: darken(#419568,20)
+		&:hover
+			background-color: #419568
+			transition: all 0.3s
+			&:before
+				left: 85%
+		&:before
+			position: absolute
+			left: 130%
+			top: 0
+			height: 100%
+			font-family: 'icomoon'
+			font-size: 100%
+			color: #fff
+			transition: all 0.3s
 .footer-bot
 	line-height: 75px
 	background-color: #54865d

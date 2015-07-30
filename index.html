@@ -472,16 +472,17 @@
 					<form id="form_contact">
 						<div class="field">
 							<label for="user_number">Nom:</label>
-							<input type="text" name="user_number" id="user_number">
+							<input type="text" name="user_number" id="user_number" data-validation="required length" data-validation-length="min15" data-validation-error-msg="Enter your number">
 						</div>
 						<div class="field">
 							<label for="user_email">Email:</label>
-							<input type="text" name="user_email" id="user_email">
+							<input type="text" name="user_email" id="user_email" data-validation="email" data-validation-length="min2" data-validation-error-msg="Enter your email">
 						</div>
 						<div class="field">
 							<label for="user_message">Message:</label>
-							<textarea name="user_message" id="user_message"></textarea>
+							<textarea name="user_message" id="user_message" data-validation="required length" data-validation-length="min2" data-validation-error-msg="Enter your email"></textarea>
 						</div>
+						<button type="submit" class="submit-btn icon-done">Send</button>
 					</form>
 				</div>
 
@@ -527,6 +528,8 @@
 	<script src="js/jquery.fancybox-thumbs.js"></script>
 	<script src="js/isotope.pkgd.min.js"></script>
 	<script src="js/wow.min.js"></script>
+	<script src="js/jquery.form-validator.min.js"></script>
+	<script src="js/jquery-mask.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
